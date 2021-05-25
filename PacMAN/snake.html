@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/snake.css">
+    <link rel="shortcut icon" href="image/ico.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <title>Змейка</title>
+</head>
+
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="image/icon3.svg" class="icon">PacMan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="site.html">главная<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Игры
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="pacman-master/pacman.html">PacMan</a>
+                            <a class="dropdown-item" href="tetris/tetris.html">тетрис</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+    </header>
+    <div>
+        <canvas width="700" height="700" id="game" class="navbar navbar-expand-lg navbar-light">
+            <script>
+                var canvas = document.getElementById('game');
+                var context = canvas.getContext('2d');
+                var grid = 16;
+                var count = 0;
+                var snake = {
+                    x: 160,
+                    y: 160,
+                    dx: grid,
+                    dy: 0,
+                    cells: [],
+                    maxCells: 4
+                };
+                var apple = {
+                    x: 320,
+                    y: 320
+                };
+                function getRandomInt(min, max) {
+                    return Math.floor(Math.random() * (max - min)) + min;
+                }
+                function loop() {
+                    requestAnimationFrame(loop);
+                    if (++count < 4) {
+                        return;
+                    }
+                    count = 0;
+                    context.clearRect(0, 0, canvas.width, canvas.height);
+                    snake.x += snake.dx;
+                    snake.y += snake.dy;
+                    if (snake.x < 0) {
+                        snake.x = canvas.width - grid;
+                    }
+                    else if (snake.x >= canvas.width) {
+                        snake.x = 0;
+                    }
+                    if (snake.y < 0) {
+                        snake.y = canvas.height - grid;
+                    }
+                    else if (snake.y >= canvas.height) {
+                        snake.y = 0;
+                    }
+                    snake.cells.unshift({ x: snake.x, y: snake.y });
+                    if (snake.cells.length > snake.maxCells) {
+                        snake.cells.pop();
+                    }
+                    context.fillStyle = 'pink';
+                    context.fillRect(apple.x, apple.y, grid - 1, grid - 1);
+                    context.fillStyle = 'aqua';
+                    snake.cells.forEach(function (cell, index) {
+                        context.fillRect(cell.x, cell.y, grid - 1, grid - 1);
+                        if (cell.x === apple.x && cell.y === apple.y) {
+                            snake.maxCells++;
+                            apple.x = getRandomInt(0, 25) * grid;
+                            apple.y = getRandomInt(0, 25) * grid;
+                        }
+                        for (var i = index + 1; i < snake.cells.length; i++) {
+                            if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+                                snake.x = 160;
+                                snake.y = 160;
+                                snake.cells = [];
+                                snake.maxCells = 4;
+                                snake.dx = grid;
+                                snake.dy = 0;
+                                apple.x = getRandomInt(0, 25) * grid;
+                                apple.y = getRandomInt(0, 25) * grid;
+                            }
+                        }
+                    });
+                }
+                document.addEventListener('keydown', function (e) {
+                    if (e.which === 37 && snake.dx === 0) {
+                        snake.dx = -grid;
+                        snake.dy = 0;
+                    }
+                    // Стрелка вверх
+                    else if (e.which === 38 && snake.dy === 0) {
+                        snake.dy = -grid;
+                        snake.dx = 0;
+                    }
+                    // Стрелка вправо
+                    else if (e.which === 39 && snake.dx === 0) {
+                        snake.dx = grid;
+                        snake.dy = 0;
+                    }
+                    // Стрелка вниз
+                    else if (e.which === 40 && snake.dy === 0) {
+                        snake.dy = grid;
+                        snake.dx = 0;
+                    }
+                });
+                requestAnimationFrame(loop);
+            </script>
+        </canvas>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="footer-left">
+                    <a href="#"><img src="image/icon3.svg" class="icon"></a>
+
+                </div>
+                <div class="footer-right">
+                    <span>Author links (click on pictures)</span>
+                    <a href="https://getbootstrap.com">BootStrap</a>
+                    <a href="http://htmlbook.ru">HTMLBook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/headhesive.min.js"></script>
+</body>
+
+
+</html>

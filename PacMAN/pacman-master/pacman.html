@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML5 Pacman</title>
+
+  <style type="text/css">
+    @font-face {
+      font-family: 'BDCartoonShoutRegular';
+      src: url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    #pacman {
+      height: 450px;
+      width: 342px;
+      margin: 20px auto;
+    }
+
+    #shim {
+      font-family: BDCartoonShoutRegular;
+      position: absolute;
+      visibility: hidden
+    }
+
+    h1 {
+      font-family: BDCartoonShoutRegular;
+      text-align: center;
+    }
+
+    body {
+      width: 342px;
+      margin: 0px auto;
+      font-family: sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="pacman.css">
+  <link rel="shortcut icon" href="../image/ico.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+  <title>PacMan</title>
+
+</head>
+<header class="container" id="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html"><img src="../image/icon3.svg" class="icon">Pacman</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">главная<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#team">О нас</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Игры
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="snake.html">Змейка</a>
+            <a class="dropdown-item" href="pacman-master/pacman.html">PacMan</a>
+            <a class="dropdown-item" href="tetris.html">тетрис</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+</header>
+
+<body>
+  <div class="container" id="header">
+    <div id="shim">shim for font face</div>
+    <div id="pacman"></div>
+    <script src="pacman.js"></script>
+    <script src="modernizr-1.5.min.js"></script>
+
+    <script>
+
+      var el = document.getElementById("pacman");
+
+      if (Modernizr.canvas && Modernizr.localstorage &&
+        Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+        window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+      } else {
+        el.innerHTML = "Sorry, needs a decent browser<br /><small>" +
+          "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+      }
+    </script>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div class="footer-left">
+          <a href="#"><img src="../image/icon3.svg" class="icon"></a>
+
+        </div>
+        <div class="footer-right">
+          <span>Author links (click on pictures)</span>
+          <a href="https://getbootstrap.com">BootStrap</a>
+          <a href="http://htmlbook.ru">HTMLBook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

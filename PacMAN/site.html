@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="image/ico.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <title>PacMan</title>
+</head>
+
+<body>
+    <header class="container" id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="site.html"><img src="image/icon3.svg" class="icon">Pacman</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="site.html">главная<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="site.html#team">О нас</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Игры
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="snake.html">Змейка</a>
+                            <a class="dropdown-item" href="pacman-master/pacman.html">PacMan</a>
+                            <a class="dropdown-item" href="tetris/tetris.html">тетрис</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+    </header>
+    <div class="container slider">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/pacman.gif" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/snake.gif" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/tetris.gif" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="yaystal" id="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="image/1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Змейка</h5>
+                            <a href="snake.html" class="btn btn-primary">Играть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="image/2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Тетрис</h5>
+                            <a href="tetris/tetris.html" class="btn btn-primary">Играть</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="image/3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Pac Man</h5>
+                            <a href="pacman-master/pacman.html" class="btn btn-primary">Играть</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="post">
+                    <h3 class="post-name">История игр</h3>
+                    <h2 class="post-title"><a href="#">Секретная кнопка</a></h2>
+                    <h2 class="center">Змейка (1976 г.)</h2>
+                    <P>В 1995 году в компанию Nokia приходит работать Танели Арманто — программист из Финляндии с
+                        небольшим опытом в игровой индустрии. Он же получает задание придумать для телефона Nokia 6110
+                        несколько простых игр, которые подходили бы по его мощности. Арманто же, в свою очередь,
+                        предлагает компании сделать всего лишь одну игру. Изначально Танели был уверен в своём варианте
+                        — тетрисе. Он уже успел его адаптировать и протестировать, как получил жесткое требование от
+                        компании Tetris] — с каждого проданного телефона она получает свою долю денег. Однако, в
+                        Nokia всех смутила фраза про «каждый проданный телефон», ведь они не собирались вести точный
+                        счет продаж. Окончательное решение находится, когда Арманто играет со своим другом на Apple
+                        Macintosh в игру, где каждый управляет своей змеей. Арманто ищет похожие игры и находит будущий
+                        первоисточник — игру Blockade 1976 года, от которой и пошли истоки «Змейки».
+
+                        Танели позднее сам вспоминал о том, что изначальная версия игры была гораздо труднее конечного
+                        варианта: у него у самого не получалось стать чемпионом, и, как он сам считает, единственный
+                        способ прохождения — тренировки. Чтобы у игрока был шанс на спасение при врезании в стенку, он
+                        добавил несколько миллисекунд задержки.
+                    </P>
+                    <h2 class="center">Pac-Man (1980 г.)</h2>
+                    <p>Pac-Man (с англ. — «Па́кман») — аркадная видеоигра, разработанная японской компанией Namco и
+                        вышедшая в 1980 году. Задача игрока — управляя Пакманом, съесть все точки в лабиринте, избегая
+                        встречи с привидениями, которые гоняются за героем. С повышением уровня игры изменяется только
+                        её сложность, архитектура лабиринта остаётся идентичной. Всего в игре 256 уровней, последний из
+                        которых невозможно завершить из-за ошибки переполнения.
+
+                        В конце 1970-х из-за успеха игры Space Invaders рынок видеоигр сосредоточился на создании
+                        аркадных шутемапов и привлекал к себе сугубо мужскую аудиторию. Сотрудник Namco Тору Иватани
+                        хотел сделать игру, которая понравилась бы всем, в особенности девушкам, и в качестве основной
+                        темы своей работы выбрал еду. В Японии созданная игра получила название Puck-Man (яп. パックマン
+                        паккуман), но при локализации в США компания Midway изменила название на Pac-Man, считая, что
+                        при оригинальном названии дети могли бы закрасить середину буквы «P», превратив её в «F», и
+                        сделать слово обсценным.
+
+                        После выхода в Японии игра была принята хорошо, но не стала популярной. В Америке же аудитория
+                        была впечатлена отсутствием в аркаде насильственного мотива, что привлекло в том числе женскую
+                        аудиторию и помогло заработать лояльность родителей к видеоигре. Всё это обеспечило популярность
+                        Pac-Man среди людей разных возрастов и профессий, породив повышенный интерес к игре и сделав
+                        Пакмана первой звездой видеоигр. Такой успех вдохновил разработчиков на создание более
+                        разнообразных игр, в том числе с отсутствием насилия.
+
+                        Благодаря популярности игра портировалась и переиздавалась на множество платформ, среди которых
+                        особую известность получила версия Pac-Man для Atari 2600. Из-за своего плохого качества она
+                        стала одним из символов кризиса видеоигр 1983 года. Pac-Man дала начало одноимённой серии
+                        игр, в которой вышло множество продолжений на различных платформах, включая аркадные автоматы,
+                        домашние игровые системы, компьютеры и мобильные телефоны. Помимо этого, вышло множество клонов,
+                        подражаний и нелегальных копий игры
+                    </p>
+                    <h2 class="nado">Тетрис (1984 г.)</h2>
+                    <p>Те́трис (производное от «тетрамино» и «теннис») — компьютерная игра, первоначально
+                        изобретённая и разработанная советским программистом Алексеем Пажитновым. Игра была выпущена 6
+                        июня 1984 года — в это время Пажитнов работал в Вычислительном центре Академии наук СССР.
+
+                        «Тетрис» представляет собой головоломку, построенную на использовании геометрических фигур
+                        «тетрамино» — разновидности полимино, состоящих из четырёх квадратов. Полимино в том или ином
+                        виде использовались в настольных играх и головоломках задолго до создания «Тетриса». Идею
+                        «Тетриса» Пажитнову подсказала игра в пентамино. Первоначальная версия игры была написана
+                        Пажитновым на языке Паскаль для компьютера «Электроника-60». Коммерческая версия игры —
+                        первая из многих последующих — была выпущена американской компанией Spectrum HoloByte
+                        (англ.)русск. в 1987 году. В последующие годы «Тетрис» во множестве различных версий был
+                        портирован на великое множество устройств, включая всевозможные компьютеры и игровые консоли, а
+                        также такие устройства, как графические калькуляторы, мобильные телефоны, медиаплееры, карманные
+                        персональные компьютеры и — в качестве «пасхального яйца» — устройства, вовсе не предназначенные
+                        для воспроизведения медиаконтента, такие, как осциллограф и паяльник.
+
+                        Особую известность в США, Европе и Японии приобрела версия для портативной консоли GameBoy,
+                        выпускавшаяся японской компанией Nintendo — игра поставлялась с каждой консолью; в России и
+                        Китае большой популярностью пользовались более примитивные устройства Brick Game со встроенной
+                        игрой. По количеству проданных коммерческих версий «Тетрис» превосходит любую другую
+                        компьютерную игру в истории — лишь для одной GameBoy было продано 35 миллионов копий; в 2014
+                        году Хэнк Роджерс, глава The Tetris Company (англ.)русск., утверждал, что количество платных
+                        загрузок игры для мобильных телефонов превысило 425 миллионов. Игра неизменно появлялась в
+                        списках лучших компьютерных игр по отдельным платформам и в целом в истории. В 2007 году
+                        «Тетрис» вошел в число десяти важнейших компьютерных игр, принятых на сохранение в Библиотеку
+                        Конгресса.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="sign">
+        <div class="col-md-offset-1 col-md-4 col-sm-12 container">
+            <div class="entry-form">
+                <form action="#" method="post">
+                    <h2>Регистрация</h2>
+                    <input type="text" name="Полное имя" class="form-control" placeholder="Полное имя" required="">
+
+                    <input type="email" name="Почта" class="form-control" placeholder="Почта" required="">
+
+                    <input type="password" name="Пароль" class="form-control" placeholder="Пароль" required="">
+
+                    <button class="submit-btn form-control" id="form-submit">ПОЛЕТЕЛИ!</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="team">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Кто делал?<small> правильно,никто.</small></h2>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb">
+                        <div class="team-image">
+                            <img src="image/1337.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Владислав</h3>
+                            <span>Больше в мушкетёров играть не буду</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb">
+                        <div class="team-image">
+                            <img src="image/1998.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Фёдор</h3>
+                            <span>Моральная поддержка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb">
+                        <div class="team-image">
+                            <img src="image/228.jpg" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Исаев</h3>
+                            <span>Лучший справочник</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="team-thumb">
+                        <div class="team-image">
+                            <img src="image/1998.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Стас</h3>
+                            <span>Моральная поддержка</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="footer-left">
+                    <a href="#"><img src="image/icon3.svg" class="icon"></a>
+
+                </div>
+                <div class="footer-right">
+                    <span>Author links (click on pictures)</span>
+                    <a href="https://getbootstrap.com">BootStrap</a>
+                    <a href="http://htmlbook.ru">HTMLBook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/headhesive.min.js"></script>
+    <script src="three.r119.min.js"></script>
+    <script src="vanta.rings.min.js"></script>
+    <script src="js/lib/stats.js"></script>
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+                count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+</body>
+
+</html>
